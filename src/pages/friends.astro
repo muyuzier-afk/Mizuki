@@ -137,11 +137,12 @@ const allTags = Array.from(new Set(friendsList.flatMap((item) => item.tags)));
 	<script is:inline src="/js/friends-page-handler.js"></script>
 </MainGridLayout>
 
-<style>
-	/* 搜索框焦点效果 */
-	#friend-search:focus {
-		box-shadow: 0 0 0 3px var(--primary) / 0.1;
-	}
+	<style>
+		/* 搜索框焦点效果 */
+		#friend-search:focus {
+			box-shadow: 0 0 0 3px
+				color-mix(in oklch, var(--primary) 20%, transparent);
+		}
 
 	/* 标签筛选按钮样式 */
 	.filter-container {
@@ -163,11 +164,11 @@ const allTags = Array.from(new Set(friendsList.flatMap((item) => item.tags)));
 		white-space: nowrap;
 	}
 
-	.filter-tag:hover:not(.active) {
-		background: var(--btn-hover-bg);
-		border-color: var(--primary);
-		transform: translateY(-1px);
-	}
+		.filter-tag:hover:not(.active) {
+			background: var(--btn-regular-bg-hover);
+			border-color: var(--primary);
+			transform: translateY(-1px);
+		}
 
 	.filter-tag.active {
 		background: var(--primary);
